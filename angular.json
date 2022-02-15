@@ -100,6 +100,37 @@
           }
         }
       }
+    },
+    "electron-view": {
+      "projectType": "library",
+      "root": "projects/electron-view",
+      "sourceRoot": "projects/electron-view/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/electron-view/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/electron-view/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/electron-view/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/electron-view/src/test.ts",
+            "tsConfig": "projects/electron-view/tsconfig.spec.json",
+            "karmaConfig": "projects/electron-view/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-electron-basecamp"

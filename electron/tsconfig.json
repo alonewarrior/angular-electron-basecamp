@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "electron-view": [
@@ -14,22 +14,20 @@
     "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "importHelpers": true,
     "target": "es2017",
-    "module": "es2020",
+    "module": "commonjs",
     "lib": [
       "es2020",
       "dom"
-    ],
-    "types": [
-      "node"
     ]
   },
   "angularCompilerOptions": {

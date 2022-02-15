@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ImagesService} from './images.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-electron-basecamp';
+  title = 'Image Browser';
+  constructor(private imageService: ImagesService) {}
+
+  ngOnInit(): void {
+    this.imageService.navigateDirectory('.');
+  }
 }
